@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo Seguridad Electrónica | Hikvision</title>
+    <style>
+        :root {
+            --hik-red: #d71920;
+            --dark-grey: #333;
+            --light-grey: #f4f4f4;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background-color: var(--light-grey);
+            color: var(--dark-grey);
+        }
+
+        header {
+            background-color: white;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 4px solid var(--hik-red);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 200px;
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #999;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-content h3 {
+            margin-top: 0;
+            color: var(--hik-red);
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        .specs {
+            list-style: none;
+            padding: 0;
+            font-size: 0.9em;
+        }
+
+        .specs li {
+            padding: 5px 0;
+            border-bottom: 1px dashed #eee;
+        }
+
+        .specs li span {
+            font-weight: bold;
+            color: #555;
+        }
+
+        .badge {
+            display: inline-block;
+            background: var(--dark-grey);
+            color: white;
+            padding: 3px 10px;
+            border-radius: 5px;
+            font-size: 0.8em;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #888;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Soluciones en Video Vigilancia</h1>
+    <p>Tecnología Hikvision de Última Generación</p>
+</header>
+
+<div class="container">
+    <div class="grid">
+        
+        <div class="card">
+            <div class="card-img" style="background: url('https://www.hikvision.com/content/dam/hikvision/en/marketing/image/solution/core-technology/colorvu/ColorVu-banner.jpg') center/cover;"></div>
+            <div class="card-content">
+                <span class="badge">Tecnología ColorVu</span>
+                <h3>Domo Full Time Color</h3>
+                <ul class="specs">
+                    <li><span>Resolución:</span> 2MP / 4MP / 4K</li>
+                    <li><span>Visión Nocturna:</span> Imágenes a color 24/7</li>
+                    <li><span>Lente:</span> Gran angular de 2.8mm</li>
+                    <li><span>Protección:</span> IP67 (Resistente a lluvia)</li>
+                    <li><span>Analítica:</span> Detección de humanos y vehículos</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img" style="background: url('https://www.hikvision.com/content/dam/hikvision/en/marketing/image/solution/core-technology/acusense/acusense-banner.jpg') center/cover;"></div>
+            <div class="card-content">
+                <span class="badge">Filtro de Falsas Alarmas</span>
+                <h3>Bala AcuSense Inteligente</h3>
+                <ul class="specs">
+                    <li><span>IA:</span> Reducción de falsas alarmas en un 90%</li>
+                    <li><span>Alcance IR:</span> Hasta 40 metros</li>
+                    <li><span>WDR:</span> 120dB (Compensación de luz)</li>
+                    <li><span>Material:</span> Metálica de alta resistencia</li>
+                    <li><span>Audio:</span> Micrófono integrado opcional</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img" style="background: url('https://www.hikvision.com/content/dam/hikvision/en/marketing/image/product/ip-products/ptz-cameras/pro-series/pro-series-banner.jpg') center/cover;"></div>
+            <div class="card-content">
+                <span class="badge">Control Total</span>
+                <h3>Domos PTZ Robóticos</h3>
+                <ul class="specs">
+                    <li><span>Zoom Óptico:</span> 25x / 32x / 42x</li>
+                    <li><span>Movimiento:</span> 360° continuos</li>
+                    <li><span>Auto-Tracking:</span> Seguimiento automático de objetivos</li>
+                    <li><span>Visión:</span> Smart IR hasta 150 metros</li>
+                    <li><span>Uso:</span> Ideal para parqueos y áreas grandes</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img" style="background: url('https://www.hikvision.com/content/dam/hikvision/en/marketing/image/product/ip-products/network-cameras/wi-fi-series/wi-fi-series-banner.jpg') center/cover;"></div>
+            <div class="card-content">
+                <span class="badge">Hogar y Oficina</span>
+                <h3>Cámara Wi-Fi Interior</h3>
+                <ul class="specs">
+                    <li><span>Conectividad:</span> Wi-Fi 2.4GHz / Ethernet</li>
+                    <li><span>Almacenamiento:</span> Ranura para MicroSD (256GB)</li>
+                    <li><span>Audio:</span> Bidireccional (Habla y escucha)</li>
+                    <li><span>Alerta:</span> Notificación inmediata al celular</li>
+                    <li><span>App:</span> Compatible 100% con Hik-Connect</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2026 Catálogo Técnico de Seguridad | Diseñado para Gestión de Ventas</p>
+</footer>
+
+</body>
+</html>
