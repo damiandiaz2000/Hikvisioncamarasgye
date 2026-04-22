@@ -3,175 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo Seguridad Electrónica | Hikvision</title>
+    <title>Catálogo Hikvision 2026 | Seguridad Electrónica</title>
     <style>
-        :root {
-            --hik-red: #d71920;
-            --dark-grey: #333;
-            --light-grey: #f4f4f4;
+        :root { --hik-red: #d71920; --dark: #1a1a1a; --text: #333; }
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #f8f9fa; color: var(--text); }
+        
+        header { 
+            background: var(--dark); color: white; padding: 30px 20px; text-align: center; 
+            border-bottom: 5px solid var(--hik-red); 
         }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            background-color: var(--light-grey);
-            color: var(--dark-grey);
+        .container { max-width: 1100px; margin: 40px auto; padding: 20px; }
+        
+        .grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 25px; 
         }
 
-        header {
+        .card { 
+            background: white; border-radius: 12px; overflow: hidden; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08); transition: 0.3s;
+            border: 1px solid #eee;
+        }
+
+        .card:hover { transform: translateY(-8px); box-shadow: 0 10px 25px rgba(0,0,0,0.15); }
+
+        /* Contenedor de imagen ajustado */
+        .card-img { 
+            width: 100%; height: 220px; 
             background-color: white;
-            padding: 20px;
-            text-align: center;
-            border-bottom: 4px solid var(--hik-red);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .card {
-            background: white;
-            border-radius: 10px;
+            display: flex; align-items: center; justify-content: center;
             overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
+            padding: 10px;
+            box-sizing: border-box;
         }
 
-        .card:hover {
-            transform: translateY(-5px);
+        .card-img img { 
+            max-width: 100%; max-height: 100%; 
+            object-fit: contain; /* Para que la cámara se vea completa sin cortarse */
         }
 
-        .card-img {
-            width: 100%;
-            height: 200px;
-            background-color: #eee;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            color: #999;
+        .card-content { padding: 20px; }
+        .card-content h3 { margin: 0 0 10px 0; color: var(--hik-red); font-size: 1.3em; }
+        
+        .badge { 
+            background: #eee; color: #555; padding: 4px 10px; 
+            border-radius: 4px; font-size: 0.75em; font-weight: bold;
+            display: inline-block; margin-bottom: 10px; text-transform: uppercase;
         }
 
-        .card-content {
-            padding: 20px;
-        }
+        .specs { list-style: none; padding: 0; margin: 0; font-size: 0.9em; }
+        .specs li { padding: 6px 0; border-bottom: 1px solid #f0f0f0; color: #666; }
+        .specs li b { color: #333; }
+        .specs li:last-child { border: none; }
 
-        .card-content h3 {
-            margin-top: 0;
-            color: var(--hik-red);
-            border-bottom: 1px solid #eee;
-            padding-bottom: 10px;
-        }
-
-        .specs {
-            list-style: none;
-            padding: 0;
-            font-size: 0.9em;
-        }
-
-        .specs li {
-            padding: 5px 0;
-            border-bottom: 1px dashed #eee;
-        }
-
-        .specs li span {
-            font-weight: bold;
-            color: #555;
-        }
-
-        .badge {
-            display: inline-block;
-            background: var(--dark-grey);
-            color: white;
-            padding: 3px 10px;
-            border-radius: 5px;
-            font-size: 0.8em;
-            margin-bottom: 10px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 40px;
-            color: #888;
-            font-size: 0.9em;
-        }
+        footer { text-align: center; padding: 30px; background: #eee; margin-top: 50px; color: #777; }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Soluciones en Video Vigilancia</h1>
-    <p>Tecnología Hikvision de Última Generación</p>
+    <img src="https://www.hikvision.com/content/dam/hikvision/en/marketing/image/hikvision-logo.png" alt="Hikvision Logo" style="height: 40px; margin-bottom: 10px; filter: brightness(0) invert(1);">
+    <h1>Catálogo Técnico de Equipos</h1>
+    <p>Soluciones Avanzadas para Seguridad y Vigilancia</p>
 </header>
 
 <div class="container">
     <div class="grid">
         
         <div class="card">
-            <div class="card-img" style="background: url('https://www.hikvision.com/content/dam/hikvision/en/marketing/image/solution/core-technology/colorvu/ColorVu-banner.jpg') center/cover;"></div>
+            <div class="card-img">
+                <img src="https://www.hikvision.com/content/dam/hikvision/en/marketing/image/product/ip-products/network-cameras/colorvu-series/colorvu-product-list.png" alt="Cámara ColorVu">
+            </div>
             <div class="card-content">
                 <span class="badge">Tecnología ColorVu</span>
-                <h3>Domo Full Time Color</h3>
+                <h3>Domo Turret 24/7 Color</h3>
                 <ul class="specs">
-                    <li><span>Resolución:</span> 2MP / 4MP / 4K</li>
-                    <li><span>Visión Nocturna:</span> Imágenes a color 24/7</li>
-                    <li><span>Lente:</span> Gran angular de 2.8mm</li>
-                    <li><span>Protección:</span> IP67 (Resistente a lluvia)</li>
-                    <li><span>Analítica:</span> Detección de humanos y vehículos</li>
+                    <li><b>Visión:</b> Color total en oscuridad extrema</li>
+                    <li><b>Resolución:</b> 4 MP de alta definición</li>
+                    <li><b>Audio:</b> Micrófono incorporado</li>
+                    <li><b>Protección:</b> IP67 para exteriores</li>
                 </ul>
             </div>
         </div>
 
         <div class="card">
-            <div class="card-img" style="background: url('https://www.hikvision.com/content/dam/hikvision/en/marketing/image/solution/core-technology/acusense/acusense-banner.jpg') center/cover;"></div>
+            <div class="card-img">
+                <img src="https://www.hikvision.com/content/dam/hikvision/en/marketing/image/product/ip-products/network-cameras/acusense-series/acusense-product-list.png" alt="Cámara AcuSense">
+            </div>
             <div class="card-content">
-                <span class="badge">Filtro de Falsas Alarmas</span>
-                <h3>Bala AcuSense Inteligente</h3>
+                <span class="badge">Inteligencia Artificial</span>
+                <h3>Bala Fija AcuSense</h3>
                 <ul class="specs">
-                    <li><span>IA:</span> Reducción de falsas alarmas en un 90%</li>
-                    <li><span>Alcance IR:</span> Hasta 40 metros</li>
-                    <li><span>WDR:</span> 120dB (Compensación de luz)</li>
-                    <li><span>Material:</span> Metálica de alta resistencia</li>
-                    <li><span>Audio:</span> Micrófono integrado opcional</li>
+                    <li><b>Analítica:</b> Clasificación de humanos/vehículos</li>
+                    <li><b>Alcance:</b> IR inteligente hasta 60m</li>
+                    <li><b>Resistencia:</b> Antivandálica IK10</li>
+                    <li><b>Filtro:</b> Reduce falsas alarmas (hojas, lluvia)</li>
                 </ul>
             </div>
         </div>
 
         <div class="card">
-            <div class="card-img" style="background: url('https://www.hikvision.com/content/dam/hikvision/en/marketing/image/product/ip-products/ptz-cameras/pro-series/pro-series-banner.jpg') center/cover;"></div>
+            <div class="card-img">
+                <img src="https://www.hikvision.com/content/dam/hikvision/en/marketing/image/product/ip-products/ptz-cameras/pro-series/pro-series-product-list.png" alt="Cámara PTZ">
+            </div>
             <div class="card-content">
-                <span class="badge">Control Total</span>
-                <h3>Domos PTZ Robóticos</h3>
+                <span class="badge">Largo Alcance</span>
+                <h3>Domo PTZ Pro Series</h3>
                 <ul class="specs">
-                    <li><span>Zoom Óptico:</span> 25x / 32x / 42x</li>
-                    <li><span>Movimiento:</span> 360° continuos</li>
-                    <li><span>Auto-Tracking:</span> Seguimiento automático de objetivos</li>
-                    <li><span>Visión:</span> Smart IR hasta 150 metros</li>
-                    <li><span>Uso:</span> Ideal para parqueos y áreas grandes</li>
+                    <li><b>Zoom:</b> Óptico 32X de alta potencia</li>
+                    <li><b>Movimiento:</b> 360° con patrullaje automático</li>
+                    <li><b>Tecnología:</b> DarkFighter (Baja luminosidad)</li>
+                    <li><b>Distancia:</b> Visión nocturna hasta 150m</li>
                 </ul>
             </div>
         </div>
 
         <div class="card">
-            <div class="card-img" style="background: url('https://www.hikvision.com/content/dam/hikvision/en/marketing/image/product/ip-products/network-cameras/wi-fi-series/wi-fi-series-banner.jpg') center/cover;"></div>
+            <div class="card-img">
+                <img src="https://www.hikvision.com/content/dam/hikvision/en/marketing/image/product/ip-products/network-cameras/wi-fi-series/wi-fi-series-product-list.png" alt="Cámara Wi-Fi">
+            </div>
             <div class="card-content">
-                <span class="badge">Hogar y Oficina</span>
-                <h3>Cámara Wi-Fi Interior</h3>
+                <span class="badge">Residencial / Oficina</span>
+                <h3>Cámara Wi-Fi Inteligente</h3>
                 <ul class="specs">
-                    <li><span>Conectividad:</span> Wi-Fi 2.4GHz / Ethernet</li>
-                    <li><span>Almacenamiento:</span> Ranura para MicroSD (256GB)</li>
-                    <li><span>Audio:</span> Bidireccional (Habla y escucha)</li>
-                    <li><span>Alerta:</span> Notificación inmediata al celular</li>
-                    <li><span>App:</span> Compatible 100% con Hik-Connect</li>
+                    <li><b>Audio:</b> Bidireccional (Habla y escucha)</li>
+                    <li><b>Instalación:</b> Plug & Play vía App</li>
+                    <li><b>Grabación:</b> Ranura para MicroSD 256GB</li>
+                    <li><b>App:</b> Monitoreo remoto Hik-Connect</li>
                 </ul>
             </div>
         </div>
@@ -180,7 +140,7 @@
 </div>
 
 <footer>
-    <p>&copy; 2026 Catálogo Técnico de Seguridad | Diseñado para Gestión de Ventas</p>
+    <p>&copy; 2026 - Catálogo para el Departamento de Ventas y Gestión | Hikvision Ecuador</p>
 </footer>
 
 </body>
